@@ -15,7 +15,7 @@ class Pengguna extends Controller
     public function index()
     {
         $data['dataPengguna'] = $this->model('M_user')->getDataPengguna();
-        $data['title'] = 'Data Pengguna';
+        $data['title'] = 'User Data';
         $data['dataTable'] = true;
 
         $this->view('layouts/backend/header', $data);
@@ -25,7 +25,7 @@ class Pengguna extends Controller
 
     public function edit(int $id)
     {
-        $data['title'] = 'Edit Data Pengguna';
+        $data['title'] = 'Edit User Data';
         $data['dataPengguna'] = $this->model('M_user')->getDataPenggunaById(id: $id);
 
         if (!$data['dataPengguna']) {
@@ -54,8 +54,8 @@ class Pengguna extends Controller
                     $this->model('M_user')->updatePengguna(id: $id, namaPengguna: $namaPengguna, username: $username, password: $password, telp: $telp);
 
                     $alert = [
-                        'title' => 'Berhasil',
-                        'text' => 'Berhasil memperbarui data pengguna',
+                        'title' => 'Succeed',
+                        'text' => 'Data updated',
                         'icon' => 'success',
                         'href' => BASE_URL . '/pengguna'
                     ];
@@ -67,8 +67,8 @@ class Pengguna extends Controller
                     $this->model('M_user')->updatePengguna(id: $id, namaPengguna: $namaPengguna, username: $username, password: null, telp: $telp);
 
                     $alert = [
-                        'title' => 'Berhasil',
-                        'text' => 'Berhasil memperbarui data pengguna',
+                        'title' => 'Succeed',
+                        'text' => 'Data updated',
                         'icon' => 'success',
                         'href' => BASE_URL . '/pengguna'
                     ];
@@ -82,8 +82,8 @@ class Pengguna extends Controller
 
                 if ($cekUsername) {
                     $alert = [
-                        'title' => 'Gagal',
-                        'text' => 'Username sudah terdaftar',
+                        'title' => 'Failed',
+                        'text' => 'Username has been registered already',
                         'icon' => 'error'
                     ];
 
@@ -98,8 +98,8 @@ class Pengguna extends Controller
                         $this->model('M_user')->updatePengguna(id: $id, namaPengguna: $namaPengguna, username: $username, password: $password, telp: $telp);
 
                         $alert = [
-                            'title' => 'Berhasil',
-                            'text' => 'Berhasil memperbarui data pengguna',
+                            'title' => 'Succeed',
+                            'text' => 'Data updated',
                             'icon' => 'success',
                             'href' => BASE_URL . '/pengguna'
                         ];
@@ -111,8 +111,8 @@ class Pengguna extends Controller
                         $this->model('M_user')->updatePengguna(id: $id, namaPengguna: $namaPengguna, username: $username, password: null, telp: $telp);
 
                         $alert = [
-                            'title' => 'Berhasil',
-                            'text' => 'Berhasil memperbarui data pengguna',
+                            'title' => 'Succeed',
+                            'text' => 'Data updated',
                             'icon' => 'success',
                             'href' => BASE_URL . '/pengguna'
                         ];
@@ -133,8 +133,8 @@ class Pengguna extends Controller
         $this->model('M_user')->deletePengguna(id: $id);
 
         $alert = [
-            'title' => 'Berhasil',
-            'text' => 'Berhasil menghapus data pengguna',
+            'title' => 'Succeed',
+            'text' => 'Data deleted',
             'icon' => 'success',
             'href' => BASE_URL . '/pengguna'
         ];

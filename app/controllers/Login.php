@@ -40,16 +40,16 @@ class Login extends Controller
                             header("location:" . BASE_URL . "/dashboard");
                         } else {
                             $data['error'] = true;
-                            $data['message'] = "Username atau password salah";
+                            $data['message'] = "Incorrect username or password";
                         }
                     } else {
                         $data['error'] = true;
-                        $data['message'] = "Username atau password salah";
+                        $data['message'] = "Incorrect username or password";
                     }
                 }
             } else {
                 $data['error'] = true;
-                $data['message'] = "Ada data yang belum di isi!";
+                $data['message'] = "You haven't filled all of the data";
             }
         }
 

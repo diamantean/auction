@@ -14,7 +14,7 @@ class Laporan extends Controller
 
     public function index()
     {
-        $data['title'] = 'Laporan';
+        $data['title'] = 'Report';
         $data['dataLaporan'] = $this->model('M_laporan')->getData();
         $data['dataTable'] = true;
 
@@ -25,7 +25,7 @@ class Laporan extends Controller
 
     public function cetak()
     {
-        $data['title'] = 'Laporan';
+        $data['title'] = 'Report';
         $data['dataLaporan'] = $this->model('M_laporan')->getData();
 
         $this->view('page/backend/laporan/cetak', $data);

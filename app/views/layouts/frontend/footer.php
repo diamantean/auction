@@ -1,6 +1,5 @@
 <footer class="text-center py-3">
     <div class="container">
-        <span class="p-3">&copy; <?= date('Y') ?> Sistem Lelang Online (SiLang) <br> Made with <i class="lni lni-heart"></i> by <a href="https://fikriks.com" target="_blank"><?= AUTHOR ?></a></span>
     </div>
 </footer>
 

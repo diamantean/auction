@@ -16,7 +16,7 @@ class Riwayat extends Controller
     {
         $userId = $_SESSION['user']['id_user'];
         $data['history'] = $this->model('M_history_lelang')->getHistoryLelangByUserId(id: $userId);
-        $data['title'] = 'Riwayat Penawaran';
+        $data['title'] = 'Bid History';
         $data['dataTable'] = true;
 
         $this->view('layouts/backend/header', $data);

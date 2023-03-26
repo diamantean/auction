@@ -11,7 +11,7 @@
             <div class="card-header">
                 <h4 class="card-title">
                     <?= $data['title'] . ' (' . count($data['dataLaporan']) . ')' ?>
-                    <a href="<?= BASE_URL ?>/laporan/cetak" class="btn btn-success" target="_blank">Cetak PDF <i data-feather="file-text"></i></a>
+                    <a href="<?= BASE_URL ?>/laporan/cetak" class="btn btn-success" target="_blank">Print PDF <i data-feather="file-text"></i></a>
                 </h4>
             </div>
             <div class="card-body">
@@ -19,12 +19,12 @@
                     <table class='table table-striped' id="table1">
                         <thead>
                             <tr>
-                                <th>Nama Barang</th>
-                                <th>Tanggal Lelang</th>
-                                <th>Harga Awal</th>
-                                <th>Harga Akhir</th>
-                                <th>Pemenang Lelang</th>
-                                <th>No.Telepon</th>
+                                <th>Name of Item</th>
+                                <th>Bid Date</th>
+                                <th>Starting Price</th>
+                                <th>Final Price</th>
+                                <th>Auction Winner</th>
+                                <th>Telephone</th>
                             </tr>
                         </thead>
                         <tbody>

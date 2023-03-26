@@ -42,8 +42,8 @@ class Petugas extends Controller
 
             if (strlen($password) < 7) {
                 $alert = [
-                    'title' => 'Gagal',
-                    'text' => 'Password minimal 7 karakter',
+                    'title' => 'Failed',
+                    'text' => 'Password has to be more than 7 characters',
                     'icon' => 'error'
                 ];
 
@@ -59,8 +59,8 @@ class Petugas extends Controller
                     $this->model('M_petugas')->addPetugas(namaPetugas: $namaPetugas, username: $username, password: $password, idLevel: $idLevel);
 
                     $alert = [
-                        'title' => 'Berhasil',
-                        'text' => 'Berhasil menambah data petugas',
+                        'title' => 'Succeed',
+                        'text' => 'Data added',
                         'icon' => 'success'
                     ];
 
@@ -69,8 +69,8 @@ class Petugas extends Controller
                     header("location:" . BASE_URL . "/petugas");
                 } else {
                     $alert = [
-                        'title' => 'Gagal',
-                        'text' => 'Username sudah terdaftar',
+                        'title' => 'Failed',
+                        'text' => 'Username has been registered already',
                         'icon' => 'error'
                     ];
 
@@ -113,8 +113,8 @@ class Petugas extends Controller
                     $this->model('M_petugas')->updatePetugas(id: $id, namaPetugas: $namaPetugas, username: $username, password: $password, idLevel: $idLevel);
 
                     $alert = [
-                        'title' => 'Berhasil',
-                        'text' => 'Berhasil memperbarui data petugas',
+                        'title' => 'Succeed',
+                        'text' => 'Data updated',
                         'icon' => 'success',
                         'href' => BASE_URL . '/petugas'
                     ];
@@ -126,8 +126,8 @@ class Petugas extends Controller
                     $this->model('M_petugas')->updatePetugas(id: $id, namaPetugas: $namaPetugas, username: $username, password: null, idLevel: $idLevel);
 
                     $alert = [
-                        'title' => 'Berhasil',
-                        'text' => 'Berhasil memperbarui data petugas',
+                        'title' => 'Succeed',
+                        'text' => 'Data updated',
                         'icon' => 'success',
                         'href' => BASE_URL . '/petugas'
                     ];
@@ -145,8 +145,8 @@ class Petugas extends Controller
                         $this->model('M_petugas')->updatePetugas(id: $id, namaPetugas: $namaPetugas, username: $username, password: $password, idLevel: $idLevel);
 
                         $alert = [
-                            'title' => 'Berhasil',
-                            'text' => 'Berhasil memperbarui data petugas',
+                            'title' => 'Succeed',
+                            'text' => 'Data updated',
                             'icon' => 'success',
                             'href' => BASE_URL . '/petugas'
                         ];
@@ -158,8 +158,8 @@ class Petugas extends Controller
                         $this->model('M_petugas')->updatePetugas(id: $id, namaPetugas: $namaPetugas, username: $username, password: null, idLevel: $idLevel);
 
                         $alert = [
-                            'title' => 'Berhasil',
-                            'text' => 'Berhasil memperbarui data petugas',
+                            'title' => 'Succeed',
+                            'text' => 'Data updated',
                             'icon' => 'success',
                             'href' => BASE_URL . '/petugas'
                         ];
@@ -174,8 +174,8 @@ class Petugas extends Controller
 
                     if ($cekUsername) {
                         $alert = [
-                            'title' => 'Gagal',
-                            'text' => 'Username sudah terdaftar',
+                            'title' => 'Failed',
+                            'text' => 'Username has been registered already',
                             'icon' => 'error'
                         ];
 
@@ -190,8 +190,8 @@ class Petugas extends Controller
                             $this->model('M_petugas')->updatePetugas(id: $id, namaPetugas: $namaPetugas, username: $username, password: $password, idLevel: $idLevel);
 
                             $alert = [
-                                'title' => 'Berhasil',
-                                'text' => 'Berhasil memperbarui data petugas',
+                                'title' => 'Succeed',
+                                'text' => 'Data updated',
                                 'icon' => 'success',
                                 'href' => BASE_URL . '/petugas'
                             ];
@@ -203,8 +203,8 @@ class Petugas extends Controller
                             $this->model('M_petugas')->updatePetugas(id: $id, namaPetugas: $namaPetugas, username: $username, password: null, idLevel: $idLevel);
 
                             $alert = [
-                                'title' => 'Berhasil',
-                                'text' => 'Berhasil memperbarui data petugas',
+                                'title' => 'Succeed',
+                                'text' => 'Data updated',
                                 'icon' => 'success',
                                 'href' => BASE_URL . '/petugas'
                             ];
@@ -226,8 +226,8 @@ class Petugas extends Controller
         $this->model('M_petugas')->deletePetugas(id: $id);
 
         $alert = [
-            'title' => 'Berhasil',
-            'text' => 'Berhasil menghapus data petugas',
+            'title' => 'Succeed',
+            'text' => 'Data deleted',
             'icon' => 'success',
             'href' => BASE_URL . '/petugas'
         ];

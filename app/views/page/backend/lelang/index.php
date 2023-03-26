@@ -11,7 +11,7 @@
             <div class="card-header">
                 <h4 class="card-title">
                     <?= $data['title'] . ' (' . count($data['dataLelang']) . ')' ?>
-                    <a href="<?= BASE_URL ?>/lelang/create" class="btn btn-primary">Tambah <i data-feather="plus"></i></a>
+                    <a href="<?= BASE_URL ?>/lelang/create" class="btn btn-primary">Add <i data-feather="plus"></i></a>
                 </h4>
             </div>
             <div class="card-body">
@@ -19,14 +19,14 @@
                     <table class='table table-striped' id="table1">
                         <thead>
                             <tr>
-                                <th>Nama Barang</th>
-                                <th>Tanggal Lelang</th>
-                                <th>Harga Awal</th>
-                                <th>Harga Akhir</th>
-                                <th>Pemenang Lelang</th>
-                                <th>Petugas</th>
-                                <th>Status Lelang</th>
-                                <th>Aksi</th>
+                                <th>Name of Item</th>
+                                <th>Start Date</th>
+                                <th>Starting Price</th>
+                                <th>Final Price</th>
+                                <th>Winning Bidder</th>
+                                <th>Operator</th>
+                                <th>Auction Status</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,8 +36,8 @@
                                     <td><?= $dl['nama_barang'] ?></td>
                                     <td><?= date('d F Y', strtotime($dl['tgl_lelang'])) ?></td>
                                     <td><?= $dl['harga_awal'] ?></td>
-                                    <td><?= $dl['harga_akhir'] ?? 'Belum Ada' ?></td>
-                                    <td><?= $dl['nama_lengkap'] ?? 'Belum Ada' ?></td>
+                                    <td><?= $dl['harga_akhir'] ?? 'Not Yet' ?></td>
+                                    <td><?= $dl['nama_lengkap'] ?? 'Not Yet' ?></td>
                                     <td><?= $dl['nama_petugas'] ?></td>
                                     <td><?= ucwords($dl['status']) ?></td>
                                     <td>

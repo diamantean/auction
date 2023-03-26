@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title><?= $data['title'] . ' - ' . APP_NAME ?></title>
-    <meta name="description" content="Aplikasi Sistem Lelang Online untuk memenuhi program Uji Kompetensi Keahlian (UKK) Rekayasa Perangkat Lunak (RPL)" />
+    <meta name="description" content="Auction website" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?= BASE_URL ?>/assets/images/apple-touch-icon.png">
@@ -24,7 +24,7 @@
 <body>
     <?php include('preload.php') ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="margin-top:30px">
         <div class="container">
             <a class="navbar-brand" href="<?= BASE_URL ?>"><img src="<?= BASE_URL ?>/assets/images/logo.svg" alt="" width="150"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

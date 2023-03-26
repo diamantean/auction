@@ -20,19 +20,19 @@
 <body>
     <div class="row">
         <div class="col-md-12 text-center">
-            <h3>Lelang Online</h3>
-            <h5>Jln. Mulu Jadian Engga No.46, Ds.Ciledug Tengah, Kec.Ciledug, Kab.Cirebon</h5>
+            <h3>Auction</h3>
+            <h5>Bandung</h5>
         </div>
     </div>
     <table class='table table-striped'>
         <thead>
             <tr>
-                <th>Nama Barang</th>
-                <th>Tanggal Lelang</th>
-                <th>Harga Awal</th>
-                <th>Harga Akhir</th>
-                <th>Pemenang Lelang</th>
-                <th>No.Telepon</th>
+                <th>Name of Item</th>
+                <th>Bid Date</th>
+                <th>Starting Price</th>
+                <th>Final Price</th>
+                <th>Auction Winner</th>
+                <th>Telephone</th>
             </tr>
         </thead>
         <tbody>

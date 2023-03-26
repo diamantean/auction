@@ -18,10 +18,10 @@
                     <table class='table table-striped' id="table1">
                         <thead>
                             <tr>
-                                <th>ID Lelang</th>
-                                <th>Nama Barang</th>
-                                <th>Penawar</th>
-                                <th>Penawaran Harga</th>
+                                <th>Bid ID</th>
+                                <th>Name of Item</th>
+                                <th>Bidder</th>
+                                <th>Bid Price</th>
                             </tr>
                         </thead>
                         <tbody>

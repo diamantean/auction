@@ -15,7 +15,7 @@ class Lelang extends Controller
     public function index()
     {
         $data['dataLelang'] = $this->model('M_lelang')->getDataLelang();
-        $data['title'] = 'Lelang Barang';
+        $data['title'] = 'Bid Item';
         $data['dataTable'] = true;
 
         $this->view('layouts/backend/header', $data);
@@ -25,7 +25,7 @@ class Lelang extends Controller
 
     public function create()
     {
-        $data['title'] = 'Tambah Data Lelang';
+        $data['title'] = 'Add Auction Data';
         $data['dataBarang'] = $this->model('M_barang')->getDataBarangBelumLelang();
 
         $this->view('layouts/backend/header', $data);
@@ -43,8 +43,8 @@ class Lelang extends Controller
             $this->model('M_lelang')->addLelang(idBarang: $idBarang, tgl: $tgl, idPetugas: $_SESSION['user']['id_petugas'], status: $status);
 
             $alert = [
-                'title' => 'Berhasil',
-                'text' => 'Berhasil menambah data lelang',
+                'title' => 'Succeed',
+                'text' => 'Item added',
                 'icon' => 'success',
                 'href' => BASE_URL . '/lelang'
             ];
@@ -61,7 +61,7 @@ class Lelang extends Controller
             header("location:" . BASE_URL . "/lelang");
         }
 
-        $data['title'] = 'Detail Data Lelang';
+        $data['title'] = 'Bid Detail';
         $data['dataHistoryLelang'] = $this->model('M_lelang')->getDataHistoryLelang(id: $id);
         $data['dataTable'] = true;
 
@@ -72,7 +72,7 @@ class Lelang extends Controller
 
     public function edit(int $id)
     {
-        $data['title'] = 'Edit Data Lelang';
+        $data['title'] = 'Edit Bid Data';
         $data['dataLelang'] = $this->model('M_lelang')->getDataLelangById(id: $id);
         $data['dataBarang'] = $this->model('M_barang')->getDataBarang();
 
@@ -103,8 +103,8 @@ class Lelang extends Controller
             }
 
             $alert = [
-                'title' => 'Berhasil',
-                'text' => 'Berhasil memperbarui data lelang',
+                'title' => 'Succeed',
+                'text' => 'Item updated',
                 'icon' => 'success',
                 'href' => BASE_URL . '/lelang'
             ];
@@ -122,8 +122,8 @@ class Lelang extends Controller
         $this->model('M_lelang')->deleteLelang(id: $id);
 
         $alert = [
-            'title' => 'Berhasil',
-            'text' => 'Berhasil menghapus data lelang',
+            'title' => 'Succeed',
+            'text' => 'Item deleted',
             'icon' => 'success',
             'href' => BASE_URL . '/lelang'
         ];

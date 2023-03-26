@@ -15,9 +15,9 @@
             <div class="card-body">
                 <form method="POST" action="<?= BASE_URL ?>/pengguna/update/<?= $data['dataPengguna']['id_user'] ?>">
                     <div class="form-group row mb-4">
-                        <label for="nama-pengguna" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pengguna <span class="text-danger fw-bold">*</span></label>
+                        <label for="nama-pengguna" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Username <span class="text-danger fw-bold">*</span></label>
                         <div class="col-sm-12 col-md-7">
-                            <input type="text" id="nama-pengguna" name="nama_pengguna" class="form-control" value="<?= $data['dataPengguna']['nama_lengkap'] ?>" placeholder="Nama Pengguna" autocomplete="off" required>
+                            <input type="text" id="nama-pengguna" name="nama_pengguna" class="form-control" value="<?= $data['dataPengguna']['nama_lengkap'] ?>" placeholder="Username" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="form-group row mb-4">
@@ -30,11 +30,11 @@
                         <label for="password" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Password </label>
                         <div class="col-sm-12 col-md-7">
                             <input type="password" id="password" name="password" class="form-control" placeholder="Password" autocomplete="off">
-                            <div class="text-muted">Kosongkan jika tidak ingin diubah</div>
+                            <div class="text-muted">Leave blank if don't want it to be changed</div>
                         </div>
                     </div>
                     <div class="form-group row mb-4">
-                        <label for="telp" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No.Telepon <span class="text-danger fw-bold">*</span></label>
+                        <label for="telp" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Telephone <span class="text-danger fw-bold">*</span></label>
                         <div class="col-sm-12 col-md-7">
                             <input type="number" id="telp" name="telp" class="form-control" placeholder="Username" value="<?= $data['dataPengguna']['telp'] ?>" autocomplete="off" required>
                         </div>

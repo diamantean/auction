@@ -4,7 +4,6 @@
                         <p><?= date('Y') ?> &copy; <?= APP_NAME ?></p>
                     </div>
                     <div class="float-end">
-                        <p>Made with <span class='text-danger'><i data-feather="heart"></i></span> by <a href="https://fikriks.com"><?= AUTHOR ?></a></p>
                     </div>
                 </div>
             </footer>

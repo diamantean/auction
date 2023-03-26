@@ -14,18 +14,18 @@
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="product-info">
                         <h2 class="title"><?= $data['dataLelang']['nama_barang'] ?></h2>
-                        <h4 class="price">Harga Awal: RP. <?= number_format($data['dataLelang']['harga_awal']) ?></h4>
+                        <h4 class="price">Starting Price: RP. <?= number_format($data['dataLelang']['harga_awal']) ?></h4>
                         <p class="info-text"><?= $data['dataLelang']['deskripsi_barang'] ?></p>
                         <div class="bottom-content">
                             <div class="row align-items-end">
                                 <div class="col-lg-12 col-md-12 col-12">
                                     <div class="button cart-button">
                                         <?php if (!empty($_SESSION['user']['id_level'])) : ?>
-                                            <button class="btn" style="width: 100%;" disabled>Login sebagai user untuk mengajukan penawaran</button>
+                                            <button class="btn" style="width: 100%;" disabled>Login as user to bid</button>
                                         <?php elseif (empty($_SESSION['user']['telp'])) : ?>
-                                            <button class="btn" style="width: 100%;" onclick="window.location.href='<?= BASE_URL ?>/login'">Login untuk mengajukan Penawaran</button>
+                                            <button class="btn" style="width: 100%;" onclick="window.location.href='<?= BASE_URL ?>/login'">Login to bid</button>
                                         <?php else : ?>
-                                            <button class="btn" style="width: 100%;" id="penawaran" data-id="<?= $data['dataLelang']['id_lelang'] ?>">Ajukan Penawaran</button>
+                                            <button class="btn" style="width: 30%;" id="penawaran" data-id="<?= $data['dataLelang']['id_lelang'] ?>">Submit Bid</button>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                 <div class="col-lg-12 col-12">
                     <div class="single-block">
                         <div class="reviews">
-                            <h4 class="title">Top 10 Bid</h4>
+                            <h4 class="title">Highest bidder(s)</h4>
 
                             <?php
                             if (count($data['historyLelang']) > 0) :
@@ -54,7 +54,7 @@
                                     </div>
                                 <?php endforeach;
                             else : ?>
-                                <p>Tidak ada data</p>
+                                <p>No data</p>
                             <?php endif; ?>
 
                         </div>

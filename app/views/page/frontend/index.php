@@ -1,27 +1,27 @@
-<section class="hero-area mt-5">
+<!-- <section class="hero-area mt-5">
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold mt-5">Sistem Lelang Online (SiLang)</h1>
+        <h1 class="display-5 fw-bold mt-5">Find Your Next Deal!</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4 mt-3">Ditujukan untuk memenuhi program Uji Kompetensi Keahlian Rekayasa Perangkat Lunak (RPL) dan sebagai metode pembelajaran untuk memperdalam pengembangan software menggunakan teknologi frontend dan backend serta berguna bagi masyarakat yang ingin membangun sebuah sistem lelang barang secara online.</p>
+            <p class="lead mb-4 mt-3">Anyone can bid on great deals from local, county, and state government agencies, schools, authorities, and more.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-3">
-                <a href="#lelang" class="btn btn-primary btn-lg px-4 gap-3">Selengkapnya</a>
+                <a href="#lelang" class="btn btn-primary btn-lg px-4 gap-3">More</a>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<section class="trending-product section" style="margin-top: 150px;" id="lelang">
+<section class="trending-product section" style="margin-top: 80px;" id="lelang">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="section-title mt-3">
-                    <h2>Barang Yang Dilelang</h2>
-                    <p>Barang yang masih dibuka untuk dilelang</p>
+                    <h1>Find Your Next Deal!</h1>
+                    <p style="margin-top:30px">Aucibid is a convenient and easy-to-use online auction service for government agencies, schools, authorities and utilities to sell their surplus and forfeitures directly to the public. All auctions take place online and are available to bid 24 hours a day.</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <?php
+        <?php
             if (count($data['dataBarang']) > 0) :
                 foreach ($data['dataBarang'] as $db) : ?>
                     <div class="col-lg-3 col-md-6 col-12">
@@ -29,7 +29,7 @@
                             <div class="product-image">
                                 <img src="<?= BASE_URL ?>/assets/images/barang/<?= $db['gambar'] ?>" alt="<?= $db['nama_barang'] ?>">
                                 <div class="button">
-                                    <a href="<?= BASE_URL ?>/detail/<?= $db['id_lelang'] ?>" class="btn"> Bid Sekarang</a>
+                                    <a href="<?= BASE_URL ?>/detail/<?= $db['id_lelang'] ?>" class="btn"> Bid Now</a>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -40,7 +40,7 @@
                                     <span>RP. <?= number_format($db['harga_awal']) ?></span>
                                 </div>
                                 <?php $hargaTertinggi = $this->model('M_history_lelang')->getHargaTertinggi($db['id_lelang']) ?>
-                                <span>Bid Tertinggi: <?= empty($hargaTertinggi) ? 'Belum ada' : 'RP. ' . number_format($hargaTertinggi['penawaran_harga']) ?></span>
+                                <span>Highest Bid: <?= empty($hargaTertinggi) ? 'Not yet' : 'RP. ' . number_format($hargaTertinggi['penawaran_harga']) ?></span>
                             </div>
                         </div>
 
@@ -48,7 +48,7 @@
                 <?php
                 endforeach;
             else : ?>
-                <p class="text-center">Tidak ada data</p>
+                <p class="text-center">No Data</p>
             <?php endif; ?>
         </div>
     </div>

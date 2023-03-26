@@ -11,7 +11,7 @@
             <div class="card-header">
                 <h4 class="card-title">
                     <?= $data['title'] . ' (' . count($data['history']) . ')' ?>
-                    <a href="<?= BASE_URL ?>/#lelang" class="btn btn-primary">Katalog Lelang</a>
+                    <a href="<?= BASE_URL ?>/#lelang" class="btn btn-primary">Auction Catalog</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -19,10 +19,10 @@
                     <table class='table table-hover' id="table1">
                         <thead>
                             <tr>
-                                <th>Tanggal Lelang</th>
-                                <th>Nama Barang</th>
-                                <th>Harga Awal</th>
-                                <th>Penawaran Harga</th>
+                                <th>Start Date</th>
+                                <th>Name of Item</th>
+                                <th>Starting Bid</th>
+                                <th>Bid Price</th>
                             </tr>
                         </thead>
                         <tbody>

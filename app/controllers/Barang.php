@@ -13,7 +13,7 @@ class Barang extends Controller
 
     public function index()
     {
-        $data['title'] = 'Data Barang';
+        $data['title'] = 'Item Data';
         $data['dataBarang'] = $this->model('M_barang')->getDataBarang();
         $data['dataTable'] = true;
 
@@ -24,7 +24,7 @@ class Barang extends Controller
 
     public function create()
     {
-        $data['title'] = 'Tambah Data Barang';
+        $data['title'] = 'Add Data';
 
         $this->view('layouts/backend/header', $data);
         $this->view('page/backend/barang/create', $data);
@@ -54,8 +54,8 @@ class Barang extends Controller
 
             if ($proses) {
                 $alert = [
-                    'title' => 'Berhasil',
-                    'text' => 'Berhasil menambah data barang',
+                    'title' => 'Succeed',
+                    'text' => 'Item added',
                     'icon' => 'success',
                     'href' => BASE_URL . '/barang'
                 ];
@@ -65,8 +65,8 @@ class Barang extends Controller
                 header("location:" . BASE_URL . "/barang");
             } else {
                 $alert = [
-                    'title' => 'Gagal',
-                    'text' => 'Gagal menambah data barang',
+                    'title' => 'Failed',
+                    'text' => 'Failed to add item',
                     'icon' => 'error'
                 ];
 
@@ -79,7 +79,7 @@ class Barang extends Controller
 
     public function edit(int $id)
     {
-        $data['title'] = 'Edit Data Barang';
+        $data['title'] = 'Edit Item';
         $data['dataBarang'] = $this->model('M_barang')->getDataBarangById(id: $id);
 
         if (!$data['dataBarang']) {
@@ -103,8 +103,8 @@ class Barang extends Controller
                 $this->model('M_barang')->updateBarang(id: $id, namaGambar: null, namaBarang: $namaBarang, tgl: $tgl, hargaAwal: $hargaAwal, deskripsiBarang: $deskripsiBarang);
 
                 $alert = [
-                    'title' => 'Berhasil',
-                    'text' => 'Berhasil memperbarui data barang',
+                    'title' => 'Succeed',
+                    'text' => 'Item updated',
                     'icon' => 'success',
                     'href' => BASE_URL . '/barang'
                 ];
@@ -133,8 +133,8 @@ class Barang extends Controller
 
                 if ($proses) {
                     $alert = [
-                        'title' => 'Berhasil',
-                        'text' => 'Berhasil memperbarui data barang',
+                        'title' => 'Succeed',
+                        'text' => 'Item updated',
                         'icon' => 'success',
                         'href' => BASE_URL . '/barang'
                     ];
@@ -144,8 +144,8 @@ class Barang extends Controller
                     header("location:" . BASE_URL . "/barang");
                 } else {
                     $alert = [
-                        'title' => 'Gagal',
-                        'text' => 'Gagal memperbarui data barang',
+                        'title' => 'Failed',
+                        'text' => 'Failed to update item',
                         'icon' => 'error'
                     ];
 
@@ -167,8 +167,8 @@ class Barang extends Controller
         $this->model('M_barang')->deleteBarang(id: $id);
 
         $alert = [
-            'title' => 'Berhasil',
-            'text' => 'Berhasil menghapus data barang',
+            'title' => 'Succeed',
+            'text' => 'Item deleted',
             'icon' => 'success',
             'href' => BASE_URL . '/barang'
         ];

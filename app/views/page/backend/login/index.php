@@ -5,9 +5,9 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="text-center mb-3">
-                                <img src="<?= BASE_URL ?>/assets/images/logo.svg" height="48" class='mb-4'>
+                            <img src="<?= BASE_URL ?>/assets/images/logo.svg" height="48" class='mb-4'>
                                 <h3>Login</h3>
-                                <p>Silahkan login terlebih dahulu.</p>
+                                <p>Login to Your Account</p>
                             </div>
                             <?php if (isset($data['error'])) { ?>
                                 <div class="alert alert-danger">
@@ -20,6 +20,7 @@
                                     <div class="position-relative">
                                         <input type="text" class="form-control" id="username" name="username" required>
                                         <div class="form-control-icon">
+                                            <i></i>
                                             <i data-feather="user"></i>
                                         </div>
                                     </div>
@@ -38,7 +39,7 @@
 
                                 <div class='form-check clearfix my-4'>
                                     <div class="text-center">
-                                        <a href="<?= BASE_URL ?>/register">Belum punya akun? Daftar</a>
+                                        <a href="<?= BASE_URL ?>/register">Don't have an account? Register here</a>
                                     </div>
                                 </div>
                                 <div class="row">

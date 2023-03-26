@@ -17,7 +17,7 @@ if (isset($_SESSION['user']['nama_petugas'])) {
                     <div class="avatar me-1">
                         <img src="https://ui-avatars.com/api/?name=<?= $nama ?>" alt="" srcset="">
                     </div>
-                    <div class="d-none d-md-block d-lg-inline-block">Hai, <?= $nama ?></div>
+                    <div class="d-none d-md-block d-lg-inline-block"><?= $nama ?></div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="<?= BASE_URL ?>/logout"><i data-feather="log-out"></i> Logout</a>

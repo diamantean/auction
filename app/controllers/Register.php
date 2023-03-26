@@ -23,7 +23,7 @@ class Register extends Controller
             if (!empty($namaLengkap) && !empty($username) && !empty($password && !empty($noTelepon))) {
                 if (strlen($password) < 7) {
                     $data['error'] = true;
-                    $data['message'] = "Password minimal 7 karakter!";
+                    $data['message'] = "Password has to be more than 7 characters";
                 } else {
                     $resultCek = $this->model('M_user')->cekUser(username: $username);
 
@@ -31,7 +31,7 @@ class Register extends Controller
                         $this->model('M_user')->registerUser(namaLengkap: $namaLengkap, username: $username, password: password_hash($password, PASSWORD_DEFAULT), noTelepon: $noTelepon);
 
                         $alert = [
-                            'title' => 'Berhasil',
+                            'title' => 'Succeed',
                             'text' => 'Berhasil mendaftar, silahkan login',
                             'icon' => 'success',
                             'href' => BASE_URL . '/login'
@@ -40,12 +40,12 @@ class Register extends Controller
                         $_SESSION['alert'] = $alert;
                     } else {
                         $data['error'] = true;
-                        $data['message'] = "Username sudah terdaftar";
+                        $data['message'] = "Username has been registered already";
                     }
                 }
             } else {
                 $data['error'] = true;
-                $data['message'] = "Ada data yang belum di isi!";
+                $data['message'] = "You haven't filled all of the data";
             }
         }
 

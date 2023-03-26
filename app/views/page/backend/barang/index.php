@@ -11,7 +11,7 @@
             <div class="card-header">
                 <h4 class="card-title">
                     <?= $data['title'] . ' (' . count($data['dataBarang']) . ')' ?>
-                    <a href="<?= BASE_URL ?>/barang/create" class="btn btn-primary">Tambah <i data-feather="plus"></i></a>
+                    <a href="<?= BASE_URL ?>/barang/create" class="btn btn-primary">Add <i data-feather="plus"></i></a>
                 </h4>
             </div>
             <div class="card-body">
@@ -19,12 +19,12 @@
                     <table class='table table-striped' id="table1">
                         <thead>
                             <tr>
-                                <th>Tanggal</th>
-                                <th>Gambar</th>
-                                <th>Nama Barang</th>
-                                <th>Harga Awal</th>
-                                <th>Deskripsi</th>
-                                <th>Aksi</th>
+                                <th>Date</th>
+                                <th>Picture</th>
+                                <th>Name of Item</th>
+                                <th>Starting Bid</th>
+                                <th>Description</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
