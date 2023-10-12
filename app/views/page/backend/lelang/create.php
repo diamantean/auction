@@ -42,7 +42,7 @@
                             <select id="status-lelang" name="status_lelang" class="form-control" required>
                                 <?php
                                 $i = 0;
-                                $status = ['-- Choose --', 'Opened', 'Closed'];
+                                $status = ['-- Choose --', 'dibuka', 'ditutup'];
 
                                 foreach ($status as $stat) {
                                 ?>
