@@ -1,7 +1,117 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.php", "use": "vercel-php@0.6.0" },
-    { "src": "user.php", "use": "vercel-php@0.6.0" }
-  ]
+    {
+      "src": "public/**/*",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/$1"
+    }
+  ],
+  "env": {
+    "API_KEY": "your-api-key"
+  }
+}
+In the example above, "API_KEY" is the name of the environment variable, and "your-api-key" is the actual value of the API key. Replace "your-api-key" with the real API key you want to use.
+
+Here's a step-by-step guide on how to set an API key in your vercel.json file:
+
+Open your vercel.json file in a text editor.
+
+Locate the "env" section. If it doesn't exist, you can add it to your configuration.
+
+Define your API key as an environment variable by adding an entry to the "env" section. Use a key-value pair, where the key is the name of the environment variable (e.g., "API_KEY") and the value is your actual API key.
+
+Save the vercel.json file.
+
+After setting the API key in your vercel.json file, you can access it in your project's code using the process.env object. For example, in JavaScript or Node.js:
+
+javascript
+Copy code
+const apiKey = process.env.API_KEY;
+// Use apiKey in your code
+By defining environment variables in your vercel.json file, you can securely manage sensitive information like API keys and ensure they are available to your application during deployment. Keep in mind that you should treat API keys as sensitive data and not expose them publicly or commit them to a public version control repository.
+
+
+
+
+User
+i get this from vercel 404: NOT_FOUND
+Code: NOT_FOUND
+ID: sin1::pqnn6-1697175960010-22c1d80ef8db
+ChatGPT
+A "404: NOT_FOUND" error in Vercel typically means that the resource you're trying to access or deploy cannot be found. This error can occur for a variety of reasons. Here are some common causes and steps to resolve it:
+
+Check Project Configuration:
+Ensure that your project is properly configured in Vercel. Make sure you have the correct project name and settings in your vercel.json file or your Vercel project settings on the dashboard.
+
+Check File Paths:
+Double-check your project's file paths. Make sure the main entry file, static files, and routes are defined correctly in your Vercel configuration.
+
+Deployment Issues:
+The error might occur if there are problems during deployment. Review your deployment logs for any error messages. Use the Vercel dashboard or the Vercel CLI to inspect the deployment details.
+
+File or Route Not Found:
+If you're attempting to access a specific file or route and it's not found, ensure that the file or route exists in your project's source code and is correctly defined.
+
+Permissions and Access:
+Ensure you have the necessary permissions to access or deploy to the project. If you're collaborating with others, make sure they also have the right permissions.
+
+Deploy to the Correct Environment:
+Verify that you're deploying to the correct environment or domain. If you have multiple environments (e.g., production and staging), make sure you're targeting the intended one.
+
+Check for Typos:
+Double-check your Vercel configuration and code for any typos, including case sensitivity in file and route paths.
+
+Review Project Logs:
+Go through your project logs in the Vercel dashboard or using the Vercel CLI to identify specific issues or errors that might be causing the "404: NOT_FOUND" error.
+
+Clear Cache and Cookies:
+In some cases, a browser cache or cookies can interfere with accessing a resource. Clear your browser's cache and cookies and try again.
+
+DNS Configuration:
+If the error is related to a custom domain, review your DNS settings to ensure they are correctly pointing to Vercel. DNS changes may take some time to propagate.
+
+If you've checked all these factors and the issue persists, you may want to contact Vercel support or consult their documentation for more specific guidance related to your project and use case. The error code and ID provided can also be useful when seeking support or troubleshooting with Vercel's help resources.
+
+
+
+
+User
+how should vercel.json look like?
+ChatGPT
+The structure and content of your vercel.json file can vary depending on your project's specific needs and configuration. However, here's a basic example of what a vercel.json file might look like:
+
+json
+Copy code
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/**/*",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/$1"
+    }
+  ],
+  "env": {
+    "API_KEY": "your-api-key",
+    "DEBUG": "true"
+  }
 }
