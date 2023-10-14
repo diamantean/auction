@@ -1,15 +1,23 @@
 {
-  "version": 2,
-  "framework": null,
-  "functions": {
-    "public/*.php": {
-      "runtime": "vercel-php@8.0"
+  "builds": [
+    {
+      "src": "index.php",
+      "use": "@vercel/php"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/index.php"
     }
+  ],
+  "functions": {
+    "public/*.php": {
+      "runtime": "vercel-php@8.1.2"
+    }
+  },
+  "public": "public",
+  "ignore": [
+    "vendor"
   ]
 }
