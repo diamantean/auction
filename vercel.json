@@ -2,8 +2,8 @@
   "version": 2,
   "framework": null,
   "functions": {
-    "public/index.php": {
-      "runtime": "vercel-php@0.5.2"
+    "public/*.php": {
+      "runtime": "vercel-php@8.0"
     }
   },
   "routes": [
